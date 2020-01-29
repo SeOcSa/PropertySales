@@ -1,0 +1,17 @@
+﻿@model IndexViewModel
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+<div class="row mt-2" style="margin-top:10px">
+    <div>
+        @foreach( var item in Model.PropertyInfos)
+        {
+            @Html.Partial("_Summary", item);
+
+        }
+    </div>
+</div>
+<div class="row">
+    <a class="btn btn-block btn-primary" asp-action="Add">Add</a>
+</div>
